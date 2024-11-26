@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -14,13 +16,22 @@ namespace Twitch_Bot_Builder
 		private bool isAdd;
 		private byte type;
 
-		public Add(bool isAdd = true)
+		public Add(bool isAdd = true, string item = "")
 		{
 			this.isAdd = isAdd;
 			InitializeComponent();
 			Instance = this;
 			if (!isAdd)
 			{
+				if (item != string.Empty)
+				{
+					MainWindow.Instance.words.TryGetValue(item, out Action action);
+					Command.Text = item;
+					Type.SelectedIndex = action.type - 1;
+					Output.Text = action.output;
+					Path.Text = action.path;
+					Duration.Text = action.getDuration();
+				}
 				Back.Content = "Delete";
 				Include.Content = "Change";
 			}
@@ -70,7 +81,7 @@ namespace Twitch_Bot_Builder
 				return;
 			}
 
-			Action action = new Action();
+			Action action = new();
 			switch(type)
 			{
 				case 1:
@@ -116,18 +127,23 @@ namespace Twitch_Bot_Builder
 					action.setMousePos(point);
 					break;
 			}
-			if (MainWindow.Instance.words.ContainsKey(Command.Text))
-			{
-				MainWindow.Instance.words.Remove(Command.Text);
-			}
+			MainWindow.Instance.words.Remove(Command.Text);
 			MainWindow.Instance.words.Add(Command.Text, action);
+			int start = MainWindow.Instance.index * 9;
+			int end = Math.Clamp(start + 9, 0, MainWindow.Instance.words.Count);
+			MainWindow.Instance.changePage(start, end);
 		}
 
 		private void Back_Click(object sender, RoutedEventArgs e)
 		{
-			if (!isAdd)
+			if (!isAdd && MainWindow.Instance.words.ContainsKey(Command.Text)) 
 			{
-				if (MainWindow.Instance.words.ContainsKey(Command.Text)) MainWindow.Instance.words.Remove(Command.Text);
+				MessageBox.Show(Command.Text);
+				MainWindow.Instance.words.Remove(Command.Text);
+				MainWindow.Instance.index = Math.Clamp(MainWindow.Instance.index, 0, MainWindow.Instance.words.Count);
+				int start = MainWindow.Instance.index * 9;
+				int end = Math.Clamp(start + 9, 0, MainWindow.Instance.words.Count);
+				MainWindow.Instance.changePage(start, end);
 			}
 			Close();
 		}

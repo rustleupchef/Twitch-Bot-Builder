@@ -3,7 +3,7 @@
 	public class Action
 	{
 		// type of command
-		private byte type;
+		public byte type = 0;
 		// the output of a typing command or keypress command (E.G You want to type hello the output variable is hello)
 		public string output;
 		// path to the file that you want to run
@@ -48,6 +48,11 @@
 			this.point = point;
 		}
 
+		public string getMousePos()
+		{
+			return $"{point[0]}, {point[1]}";
+		} 
+
 		// transforming the types 
 		public void setType(byte type)
 		{
@@ -75,6 +80,11 @@
 		public string getKeyPress()
 		{
 			return $"{output} {duration}";
+		}
+
+		public string getDuration()
+		{
+			return duration.ToString();
 		}
 	}
 }

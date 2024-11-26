@@ -61,6 +61,15 @@ namespace Twitch_Bot_Builder {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to C:\Users\ravin\source\repos\Twitch Bot Builder\.
+        /// </summary>
+        internal static string Path {
+            get {
+                return ResourceManager.GetString("Path", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to monkeypoxspreaders.
         /// </summary>
         internal static string User {
