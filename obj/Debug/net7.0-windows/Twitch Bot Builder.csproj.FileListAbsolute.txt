@@ -1,0 +1,47 @@
+C:\Users\ravin\source\repos\Twitch Bot Builder\bin\Debug\net7.0-windows\Twitch Bot Builder.exe
+C:\Users\ravin\source\repos\Twitch Bot Builder\bin\Debug\net7.0-windows\Twitch Bot Builder.deps.json
+C:\Users\ravin\source\repos\Twitch Bot Builder\bin\Debug\net7.0-windows\Twitch Bot Builder.runtimeconfig.json
+C:\Users\ravin\source\repos\Twitch Bot Builder\bin\Debug\net7.0-windows\Twitch Bot Builder.dll
+C:\Users\ravin\source\repos\Twitch Bot Builder\bin\Debug\net7.0-windows\Twitch Bot Builder.pdb
+C:\Users\ravin\source\repos\Twitch Bot Builder\bin\Debug\net7.0-windows\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\ravin\source\repos\Twitch Bot Builder\bin\Debug\net7.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\ravin\source\repos\Twitch Bot Builder\bin\Debug\net7.0-windows\Microsoft.Extensions.Logging.dll
+C:\Users\ravin\source\repos\Twitch Bot Builder\bin\Debug\net7.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\ravin\source\repos\Twitch Bot Builder\bin\Debug\net7.0-windows\Microsoft.Extensions.Options.dll
+C:\Users\ravin\source\repos\Twitch Bot Builder\bin\Debug\net7.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\ravin\source\repos\Twitch Bot Builder\bin\Debug\net7.0-windows\Newtonsoft.Json.dll
+C:\Users\ravin\source\repos\Twitch Bot Builder\bin\Debug\net7.0-windows\TwitchLib.Api.dll
+C:\Users\ravin\source\repos\Twitch Bot Builder\bin\Debug\net7.0-windows\TwitchLib.Api.Core.dll
+C:\Users\ravin\source\repos\Twitch Bot Builder\bin\Debug\net7.0-windows\TwitchLib.Api.Core.Enums.dll
+C:\Users\ravin\source\repos\Twitch Bot Builder\bin\Debug\net7.0-windows\TwitchLib.Api.Core.Interfaces.dll
+C:\Users\ravin\source\repos\Twitch Bot Builder\bin\Debug\net7.0-windows\TwitchLib.Api.Core.Models.dll
+C:\Users\ravin\source\repos\Twitch Bot Builder\bin\Debug\net7.0-windows\TwitchLib.Api.Helix.dll
+C:\Users\ravin\source\repos\Twitch Bot Builder\bin\Debug\net7.0-windows\TwitchLib.Api.Helix.Models.dll
+C:\Users\ravin\source\repos\Twitch Bot Builder\bin\Debug\net7.0-windows\TwitchLib.Client.dll
+C:\Users\ravin\source\repos\Twitch Bot Builder\bin\Debug\net7.0-windows\TwitchLib.Client.Enums.dll
+C:\Users\ravin\source\repos\Twitch Bot Builder\bin\Debug\net7.0-windows\TwitchLib.Client.Models.dll
+C:\Users\ravin\source\repos\Twitch Bot Builder\bin\Debug\net7.0-windows\TwitchLib.Communication.dll
+C:\Users\ravin\source\repos\Twitch Bot Builder\bin\Debug\net7.0-windows\TwitchLib.EventSub.Core.dll
+C:\Users\ravin\source\repos\Twitch Bot Builder\bin\Debug\net7.0-windows\TwitchLib.EventSub.Websockets.dll
+C:\Users\ravin\source\repos\Twitch Bot Builder\bin\Debug\net7.0-windows\TwitchLib.PubSub.dll
+C:\Users\ravin\source\repos\Twitch Bot Builder\obj\Debug\net7.0-windows\Twitch Bot Builder.csproj.AssemblyReference.cache
+C:\Users\ravin\source\repos\Twitch Bot Builder\obj\Debug\net7.0-windows\MainWindow.g.cs
+C:\Users\ravin\source\repos\Twitch Bot Builder\obj\Debug\net7.0-windows\App.g.cs
+C:\Users\ravin\source\repos\Twitch Bot Builder\obj\Debug\net7.0-windows\Twitch Bot Builder_MarkupCompile.cache
+C:\Users\ravin\source\repos\Twitch Bot Builder\obj\Debug\net7.0-windows\Twitch Bot Builder_MarkupCompile.lref
+C:\Users\ravin\source\repos\Twitch Bot Builder\obj\Debug\net7.0-windows\MainWindow.baml
+C:\Users\ravin\source\repos\Twitch Bot Builder\obj\Debug\net7.0-windows\Twitch Bot Builder.g.resources
+C:\Users\ravin\source\repos\Twitch Bot Builder\obj\Debug\net7.0-windows\Twitch_Bot_Builder.TwitchData.resources
+C:\Users\ravin\source\repos\Twitch Bot Builder\obj\Debug\net7.0-windows\Twitch Bot Builder.csproj.GenerateResource.cache
+C:\Users\ravin\source\repos\Twitch Bot Builder\obj\Debug\net7.0-windows\Twitch Bot Builder.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ravin\source\repos\Twitch Bot Builder\obj\Debug\net7.0-windows\Twitch Bot Builder.AssemblyInfoInputs.cache
+C:\Users\ravin\source\repos\Twitch Bot Builder\obj\Debug\net7.0-windows\Twitch Bot Builder.AssemblyInfo.cs
+C:\Users\ravin\source\repos\Twitch Bot Builder\obj\Debug\net7.0-windows\Twitch Bot Builder.csproj.CoreCompileInputs.cache
+C:\Users\ravin\source\repos\Twitch Bot Builder\obj\Debug\net7.0-windows\Twitch Bot Builder.csproj.CopyComplete
+C:\Users\ravin\source\repos\Twitch Bot Builder\obj\Debug\net7.0-windows\Twitch Bot Builder.dll
+C:\Users\ravin\source\repos\Twitch Bot Builder\obj\Debug\net7.0-windows\refint\Twitch Bot Builder.dll
+C:\Users\ravin\source\repos\Twitch Bot Builder\obj\Debug\net7.0-windows\Twitch Bot Builder.pdb
+C:\Users\ravin\source\repos\Twitch Bot Builder\obj\Debug\net7.0-windows\Twitch Bot Builder.genruntimeconfig.cache
+C:\Users\ravin\source\repos\Twitch Bot Builder\obj\Debug\net7.0-windows\ref\Twitch Bot Builder.dll
+C:\Users\ravin\source\repos\Twitch Bot Builder\obj\Debug\net7.0-windows\Add.g.cs
+C:\Users\ravin\source\repos\Twitch Bot Builder\obj\Debug\net7.0-windows\Add.baml

@@ -61,6 +61,15 @@ namespace Twitch_Bot_Builder {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to monkeypoxspreaders.
+        /// </summary>
+        internal static string User {
+            get {
+                return ResourceManager.GetString("User", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to gtls0it2th0vhhx1tgp7q0ltanjld8.
         /// </summary>
         internal static string UserToken {

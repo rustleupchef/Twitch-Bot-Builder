@@ -1,0 +1,36 @@
+﻿<Window x:Class="Twitch_Bot_Builder.Add"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Twitch_Bot_Builder"
+        mc:Ignorable="d"
+        Title="Add" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <TextBox Name="Command">Command Name</TextBox>
+        <ComboBox Name="Type" Grid.Row="1" SelectionChanged="Type_SelectionChanged">
+            <ComboBoxItem>Typing</ComboBoxItem>
+            <ComboBoxItem>Key Press</ComboBoxItem>
+            <ComboBoxItem>Proccess</ComboBoxItem>
+            <ComboBoxItem>Set Mouse Position</ComboBoxItem>
+        </ComboBox>
+        <TextBox Name="Output" Grid.Row="2">Output</TextBox>
+        <TextBox Name="Path" Grid.Row="3">Path</TextBox>
+        <TextBox Name="Duration" Grid.Row="4">Duration</TextBox>
+        <TextBox Name="Position" Grid.Row="5">Position</TextBox>
+
+        <Button Name="Back" Grid.Row="6" Click="Back_Click">Back</Button>
+        <Button Name="Include" Grid.Row="7" Click="Include_Click">Add</Button>
+    </Grid>
+</Window>

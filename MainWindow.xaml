@@ -7,6 +7,35 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="85*"/>
+            <ColumnDefinition Width="15*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
 
+        <Button Name="one" Background="AliceBlue" Click="one_Click"></Button>
+        <Button Name="two" Background="AliceBlue" Grid.Row="1" Click="two_Click"></Button>
+        <Button Name="three" Background="AliceBlue" Grid.Row="2" Click="three_Click"></Button>
+        <Button Name="four" Background="AliceBlue" Grid.Row="3" Click="four_Click"></Button>
+        <Button Name="five" Background="AliceBlue" Grid.Row="4" Click="five_Click"></Button>
+        <Button Name="six" Background="AliceBlue" Grid.Row="5" Click="six_Click"></Button>
+        <Button Name="seven" Background="AliceBlue" Grid.Row="6" Click="seven_Click"></Button>
+        <Button Name="eight" Background="AliceBlue" Grid.Row="7" Click="eight_Click"></Button>
+        <Button Name="nine" Background="AliceBlue"  Grid.Row="8" Click="nine_Click"></Button>
+
+        <Button Name="next" Grid.Column="1" Grid.RowSpan="2" Click="Next_Click">Next</Button>
+        <Button Name="back" Grid.Column="1" Grid.Row="2" Grid.RowSpan="2" Click="Back_Click">Back</Button>
+        <Button Name="add" Grid.Column="1" Grid.Row="4" Grid.RowSpan="2" Click="Add_Click">Add</Button>
+        <Button Name="start" Grid.Column="1" Grid.Row="6" Grid.RowSpan="3" Click="Start_Click">Start</Button>
     </Grid>
 </Window>

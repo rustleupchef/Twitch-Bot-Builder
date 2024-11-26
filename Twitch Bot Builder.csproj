@@ -9,6 +9,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="TwitchLib" Version="3.5.3" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="TwitchData.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
