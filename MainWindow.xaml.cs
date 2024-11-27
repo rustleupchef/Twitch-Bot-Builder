@@ -6,6 +6,7 @@ using TwitchLib.Client.Models;
 using TwitchLib.Client.Events;
 using System.Windows.Controls;
 using System.Diagnostics;
+using System.IO;
 
 namespace Twitch_Bot_Builder
 {
@@ -58,45 +59,49 @@ namespace Twitch_Bot_Builder
 
 		private void Start_Click(object sender, RoutedEventArgs e)
 		{
-			try
+			run = !run;
+			if (!run)
 			{
-				run = !run;
-				if (!run)
-				{
-					start.Content = "Start";
-					client.Disconnect();
-					return;
-				}
-				start.Content = "Stop";
-				client.Initialize(credentials, TwitchData.User);
-				client.Connect();
-				client.OnMessageReceived += new EventHandler<OnMessageReceivedArgs>(Received_Message);
+				start.Content = "Start";
+				client.Disconnect();
+				return;
 			}
-			catch(Exception ex)
-			{
-				MessageBox.Show(ex.Message);
-				throw;
-			}
+			start.Content = "Stop";
+			client.Initialize(credentials, TwitchData.User);
+			client.Connect();
+			client.OnMessageReceived += new EventHandler<OnMessageReceivedArgs>(Received_Message);
 		}
 
 		private void Received_Message(object sender, OnMessageReceivedArgs e)
 		{
 			if (!words.TryGetValue(e.ChatMessage.Message, out Action action)) return;
-			switch(action.type)
+			switch((int)action.type)
 			{
 				case 1:
-
+					System.Windows.Forms.SendKeys.SendWait(action.output);
+					break;
+				case 2:
+					runProcess("cmd.exe", $"/c python \"{TwitchData.Path}main.py\" \"{action.output}\" {action.getDuration()}", true);
+					break;
+				case 3:
+					runProcess("cmd.exe", $"start \"{action.path}\"");
+					break;
+				case 4:
+					System.Windows.Forms.Cursor.Position = new(action.point[0], action.point[1]);
 					break;
 			}
 		}
 
-		private void runProcess(string file, string arguments = "")
+		private void runProcess(string file, string arguments = "", bool createNoWindow = false)
 		{
 
 			Process process = new Process();
-			process.StartInfo.UseShellExecute = true;
+			process.StartInfo.UseShellExecute = false;
+			process.StartInfo.RedirectStandardOutput = true;
+			process.StartInfo.RedirectStandardInput = true;
 			process.StartInfo.FileName = file;
 			if (arguments != string.Empty) process.StartInfo.Arguments = arguments;
+			process.StartInfo.CreateNoWindow = createNoWindow;
 			process.Start();
 			process.WaitForExit();
 
