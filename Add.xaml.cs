@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -31,6 +30,7 @@ namespace Twitch_Bot_Builder
 					Output.Text = action.output;
 					Path.Text = action.path;
 					Duration.Text = action.getDuration();
+					Position = action.getMousePos();
 				}
 				Back.Content = "Delete";
 				Include.Content = "Change";
@@ -52,15 +52,15 @@ namespace Twitch_Bot_Builder
 				case "Key Press":
 					type = 2;
 					Output.Visibility = Visibility.Visible;
-					Duration.Visibility= Visibility.Visible;
-					Path.Visibility= Visibility.Hidden;
+					Duration.Visibility = Visibility.Visible;
+					Path.Visibility = Visibility.Hidden;
 					Position.Visibility = Visibility.Hidden;
 					break;
 				case "Proccess":
 					type = 3;
 					Output.Visibility = Visibility.Hidden;
 					Path.Visibility = Visibility.Visible;
-					Duration.Visibility= Visibility.Hidden;
+					Duration.Visibility = Visibility.Hidden;
 					Position.Visibility = Visibility.Hidden;
 					break;
 				case "Set Mouse Position":
@@ -82,7 +82,7 @@ namespace Twitch_Bot_Builder
 			}
 
 			Action action = new();
-			switch(type)
+			switch (type)
 			{
 				case 1:
 					action.setTyping(Output.Text);
@@ -129,6 +129,7 @@ namespace Twitch_Bot_Builder
 			}
 			MainWindow.Instance.words.Remove(Command.Text);
 			MainWindow.Instance.words.Add(Command.Text, action);
+			WriteData();
 			int start = MainWindow.Instance.index * 9;
 			int end = Math.Clamp(start + 9, 0, MainWindow.Instance.words.Count);
 			MainWindow.Instance.changePage(start, end);
@@ -136,16 +137,31 @@ namespace Twitch_Bot_Builder
 
 		private void Back_Click(object sender, RoutedEventArgs e)
 		{
-			if (!isAdd && MainWindow.Instance.words.ContainsKey(Command.Text)) 
+			if (!isAdd && MainWindow.Instance.words.ContainsKey(Command.Text))
 			{
 				MessageBox.Show(Command.Text);
 				MainWindow.Instance.words.Remove(Command.Text);
+				WriteData();
 				MainWindow.Instance.index = Math.Clamp(MainWindow.Instance.index, 0, MainWindow.Instance.words.Count);
 				int start = MainWindow.Instance.index * 9;
 				int end = Math.Clamp(start + 9, 0, MainWindow.Instance.words.Count);
 				MainWindow.Instance.changePage(start, end);
 			}
 			Close();
+		}
+
+		private void WriteData()
+		{
+			Dictionary<string, Action> words = MainWindow.Instance.words;
+			string data = "";
+			int i = 0;
+			foreach (string key in words.Keys)
+			{
+				words.TryGetValue(key, out Action action);
+				data += key + "," + action.convertToString()  + (i < words.Count - 1 ? "\n" : "");
+				i++;
+			}
+			File.WriteAllText(TwitchData.CommandsPath, data);
 		}
 	}
 }

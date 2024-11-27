@@ -1,4 +1,7 @@
-﻿namespace Twitch_Bot_Builder
+﻿using System;
+using System.Diagnostics.Metrics;
+
+namespace Twitch_Bot_Builder
 {
 	public class Action
 	{
@@ -85,6 +88,44 @@
 		public string getDuration()
 		{
 			return duration.ToString();
+		}
+
+		// convert data to string
+		public string convertToString()
+		{
+			switch (type)
+			{
+				case 1:
+					return $"1,{output}";
+				case 2:
+					return $"2,{output},{duration}";
+				case 3:
+					return $"3,{path}";
+				case 4:
+					return $"4,{point[0]},{point[1]}";
+				default:
+					return "";
+			}
+		}
+
+		public void toAction(string action)
+		{
+			string[] items = action.Split(',');
+			switch (items[1])
+			{
+				case "1":
+					setTyping(items[2]);
+					break;
+				case "2":
+					setKeyPressing(items[2], Single.Parse(items[3]));
+					break;
+				case "3":
+					setProcess(items[2]);
+					break;
+				case "4":
+					setMousePos(Int32.Parse(items[2]), Int32.Parse(items[3]));
+					break;
+			}
 		}
 	}
 }

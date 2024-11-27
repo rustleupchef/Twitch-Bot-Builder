@@ -61,11 +61,20 @@ namespace Twitch_Bot_Builder {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to C:\Users\ravin\source\repos\Twitch Bot Builder\Commands.txt.
+        /// </summary>
+        internal static string CommandsPath {
+            get {
+                return ResourceManager.GetString("CommandsPath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to C:\Users\ravin\source\repos\Twitch Bot Builder\.
         /// </summary>
-        internal static string Path {
+        internal static string PythonPath {
             get {
-                return ResourceManager.GetString("Path", resourceCulture);
+                return ResourceManager.GetString("PythonPath", resourceCulture);
             }
         }
         

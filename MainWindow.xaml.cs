@@ -30,6 +30,7 @@ namespace Twitch_Bot_Builder
 			Instance = this;
 			Button[] buttons = new Button[] { one, two, three, four, five, six, seven, eight, nine };
 			foreach (Button button in buttons) button.Content = "";
+			readActions();
 		}
 
 
@@ -81,7 +82,7 @@ namespace Twitch_Bot_Builder
 					System.Windows.Forms.SendKeys.SendWait(action.output);
 					break;
 				case 2:
-					runProcess("cmd.exe", $"/c python \"{TwitchData.Path}main.py\" \"{action.output}\" {action.getDuration()}", true);
+					runProcess("cmd.exe", $"/c python \"{TwitchData.PythonPath}main.py\" \"{action.output}\" {action.getDuration()}", true);
 					break;
 				case 3:
 					runProcess("cmd.exe", $"start \"{action.path}\"");
@@ -105,6 +106,20 @@ namespace Twitch_Bot_Builder
 			process.Start();
 			process.WaitForExit();
 
+		}
+
+		private void readActions()
+		{
+			string text = File.ReadAllText(TwitchData.CommandsPath);
+			if (text == string.Empty) return;
+			string[] data = File.ReadAllText(TwitchData.CommandsPath).Split('\n');
+			foreach(string line in data)
+			{
+				Action action = new Action();
+				action.toAction(line);
+				words.Add(line.Split(',')[0], action);
+			}
+			changePage(0, Math.Clamp(9, 0, words.Count));
 		}
 
 		public void changePage(int start, int stop)
