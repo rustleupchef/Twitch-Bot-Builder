@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Twitch_Bot_Builder"
         mc:Ignorable="d"
-        Title="Add" Height="450" Width="800" FontFamily="Microsoft YaHei Light">
+        Title="Add Item" Height="450" Width="800" FontSize="16" Icon="/Logo.png" Background="#333332">
     <Grid>
         <Grid.Resources>
             <Style TargetType="Button">
@@ -14,6 +14,8 @@
                         <Setter Property="CornerRadius" Value="10"></Setter>
                     </Style>
                 </Style.Resources>
+                <Setter Property="Background" Value="#FFA762FD"></Setter>
+                <Setter Property="Foreground" Value="White"></Setter>
             </Style>
             <Style TargetType="TextBox">
                 <Style.Resources>
@@ -21,6 +23,8 @@
                         <Setter Property="CornerRadius" Value="10"></Setter>
                     </Style>
                 </Style.Resources>
+                <Setter Property="Background" Value="#FF545454"></Setter>
+                <Setter Property="Foreground" Value="White"></Setter>
             </Style>
             <Style TargetType="Border">
                 <Setter Property="Padding" Value="3"></Setter>
@@ -49,7 +53,7 @@
             </ComboBox>
         </Border>
         <Border Grid.Row="2">
-            <TextBox Name="Output" >Output</TextBox>
+            <TextBox Name="Output">Output</TextBox>
         </Border>
         <Border Grid.Row="3">
             <TextBox Name="Path">Path</TextBox>
@@ -60,10 +64,10 @@
         <Border Grid.Row="5">
             <TextBox Name="Position">Position</TextBox>
         </Border>
-        <Border Grid.Row="6">
+        <Border Grid.Row="7">
             <Button Name="Back" Click="Back_Click">Back</Button>
         </Border>
-        <Border Grid.Row="7">
+        <Border Grid.Row="6">
             <Button Name="Include" Click="Include_Click">Add</Button>
         </Border>
     </Grid>

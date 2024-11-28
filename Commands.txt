@@ -1,5 +1,6 @@
-forward,2,up,5
+forward,2,W,5
 backward,2,S,5
 right,2,D,5
 left,2,A,5
-Look Right,1,Howdy
+Look Right,4,1420,500
+Look Left,4,500,500
