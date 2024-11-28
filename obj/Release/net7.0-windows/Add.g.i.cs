@@ -118,7 +118,7 @@ namespace Twitch_Bot_Builder {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Twitch Bot Builder;component/add.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Twitch Bot Builder;V1.0.0.0;component/add.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Add.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

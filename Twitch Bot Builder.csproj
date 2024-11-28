@@ -10,7 +10,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="DALL·E 2024-11-27 20.13.04 - A modern and sleek logo for a Twitch bot builder, featuring a stylized robotic mascot integrated with Twitch-themed colors %28purple and white%29 and subt.webp" />
     <None Remove="Logo.png" />
   </ItemGroup>
 
@@ -20,7 +19,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="DALL·E 2024-11-27 20.13.04 - A modern and sleek logo for a Twitch bot builder, featuring a stylized robotic mascot integrated with Twitch-themed colors (purple and white) and subt.webp" />
     <Resource Include="Logo.png" />
   </ItemGroup>
 
