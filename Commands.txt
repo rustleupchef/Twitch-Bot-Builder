@@ -1,4 +1,4 @@
-forward,2,W,5
+forward,2,up,5
 backward,2,S,5
 right,2,D,5
 left,2,A,5

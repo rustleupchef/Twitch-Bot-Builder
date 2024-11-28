@@ -11,4 +11,3 @@ except:
         pyautogui.keyDown(str(char))
         sleep(float(sys.argv[2]))
         pyautogui.keyUp(str(char))
-    sleep(float(sys.argv[2]))
