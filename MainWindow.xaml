@@ -5,8 +5,76 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Twitch_Bot_Builder"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" FontFamily="Microsoft YaHei Light">
     <Grid>
+        <Grid.Resources>
+            <Style TargetType="Border">
+                <Setter Property="Padding" Value="3"></Setter>
+            </Style>
 
+            <Style TargetType="Button">
+                <Style.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"></Setter>
+                    </Style>
+                </Style.Resources>
+            </Style>
+        </Grid.Resources>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="85*"/>
+            <ColumnDefinition Width="15*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Border>
+            <Button Name="one" Background="AliceBlue" Click="one_Click"></Button>
+        </Border>
+        <Border Grid.Row="1">
+            <Button Name="two" Background="AliceBlue" Click="two_Click"></Button>
+        </Border>
+        <Border Grid.Row="2">
+            <Button Name="three" Background="AliceBlue" Click="three_Click"></Button>
+        </Border>
+        <Border Grid.Row="3">
+            <Button Name="four" Background="AliceBlue" Click="four_Click"></Button>
+        </Border>
+        <Border Grid.Row="4">
+            <Button Name="five" Background="AliceBlue" Click="five_Click"></Button>
+        </Border>
+        <Border Grid.Row="5">
+            <Button Name="six" Background="AliceBlue" Grid.Row="5" Click="six_Click"></Button>
+        </Border>
+        <Border Grid.Row="6">
+            <Button Name="seven" Background="AliceBlue" Grid.Row="6" Click="seven_Click"></Button>
+        </Border>
+        <Border Grid.Row="7">
+            <Button Name="eight" Background="AliceBlue" Grid.Row="7" Click="eight_Click"></Button>
+        </Border>
+        <Border Grid.Row="8">
+            <Button Name="nine" Background="AliceBlue"  Grid.Row="8" Click="nine_Click"></Button>
+        </Border>
+
+        <Border Grid.Column="1" Grid.RowSpan="1">
+            <Button Name="next" Click="Next_Click">Next</Button>
+        </Border>
+        <Border Grid.Column="1" Grid.Row="1">
+            <Button Name="back" Click="Back_Click">Back</Button>
+        </Border>
+        <Border Grid.Column="1" Grid.Row="2">
+            <Button Name="add" Click="Add_Click">Add</Button>
+        </Border>
+        <Border Grid.Column="1" Grid.Row="3">
+            <Button Name="start" Click="Start_Click">Start</Button>
+        </Border>
     </Grid>
 </Window>

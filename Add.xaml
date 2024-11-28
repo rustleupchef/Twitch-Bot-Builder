@@ -1,0 +1,70 @@
+﻿<Window x:Class="Twitch_Bot_Builder.Add"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Twitch_Bot_Builder"
+        mc:Ignorable="d"
+        Title="Add" Height="450" Width="800" FontFamily="Microsoft YaHei Light">
+    <Grid>
+        <Grid.Resources>
+            <Style TargetType="Button">
+                <Style.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"></Setter>
+                    </Style>
+                </Style.Resources>
+            </Style>
+            <Style TargetType="TextBox">
+                <Style.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"></Setter>
+                    </Style>
+                </Style.Resources>
+            </Style>
+            <Style TargetType="Border">
+                <Setter Property="Padding" Value="3"></Setter>
+            </Style>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Border>
+            <TextBox Name="Command">Command Name</TextBox>
+        </Border>
+        <Border Grid.Row="1">
+            <ComboBox Name="Type" SelectionChanged="Type_SelectionChanged">
+                <ComboBoxItem>Typing</ComboBoxItem>
+                <ComboBoxItem>Key Press</ComboBoxItem>
+                <ComboBoxItem>Proccess</ComboBoxItem>
+                <ComboBoxItem>Set Mouse Position</ComboBoxItem>
+            </ComboBox>
+        </Border>
+        <Border Grid.Row="2">
+            <TextBox Name="Output" >Output</TextBox>
+        </Border>
+        <Border Grid.Row="3">
+            <TextBox Name="Path">Path</TextBox>
+        </Border>
+        <Border Grid.Row="4">
+            <TextBox Name="Duration">Duration</TextBox>
+        </Border>
+        <Border Grid.Row="5">
+            <TextBox Name="Position">Position</TextBox>
+        </Border>
+        <Border Grid.Row="6">
+            <Button Name="Back" Click="Back_Click">Back</Button>
+        </Border>
+        <Border Grid.Row="7">
+            <Button Name="Include" Click="Include_Click">Add</Button>
+        </Border>
+    </Grid>
+</Window>
